@@ -1,0 +1,80 @@
+@import '/src/styles/typography.scss';
+
+.operation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+
+  box-shadow: 0px 0px 15px rgba(180, 180, 255, 0.25);;
+  border-radius: 20px;
+  color: #1c1921;
+  background-color: #fff7f3;
+
+  transition: box-shadow 0.5s;
+
+  &:hover {
+    box-shadow: 0px 0px 30px rgba(109, 107, 208, 0.44);
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+  }
+
+  &__category {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(142.03deg, #FFAE80 -15.8%, #FF6B00 100%);
+    border-radius: 50%;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 24px;
+  }
+
+  &__label {
+    @include railway-bold;
+    font-size: 20px;
+  }
+
+  &__details {
+    @include lato-regular;
+    margin-top: 10px;
+    color: #9993a4;
+    font-size: 14px;
+  }
+
+  &__sum {
+    @include lato-bold;
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+.peach {
+  background-color: #FFF7F3;
+}
+
+.pink {
+  background-color: #FFF2FA;
+}
+
+.orange {
+  background-color: #FFF3F3;
+}
+
+.green {
+  background-color: #EAFBF6;
+}
+
+.blue {
+  background-color: #F3F3FF;
+}
+
+.purple {
+  background-color: #FFF3FF;
+}

@@ -1,0 +1,23 @@
+@mixin railway-regular {
+  font-family: 'Raleway', sans-serif;
+  // font-family: 'Chilanka', cursive;
+  font-weight: 400;
+}
+
+@mixin railway-bold {
+  font-family: 'Raleway', sans-serif;
+  // font-family: 'Chilanka', cursive;
+  font-weight: 600;
+}
+
+@mixin lato-regular {
+  font-family: 'Lato', sans-serif;
+  // font-family: 'Chilanka', cursive;
+  font-weight: 400;
+}
+
+@mixin lato-bold {
+  font-family: 'Lato', sans-serif;
+  // font-family: 'Chilanka', cursive;
+  font-weight: 700;
+}

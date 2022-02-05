@@ -1,0 +1,15 @@
+@import '../styles/typography.scss';
+
+.operation-group {
+  &__label {
+    @include railway-bold;
+    margin-bottom: 24px;
+
+    font-size: 16px;
+    color: #c3bcce;
+  }
+
+  &__operation {
+    margin-bottom: 24px;
+  }
+}

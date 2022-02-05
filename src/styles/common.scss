@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  background-color: rgba(109, 107, 208, 0.14);
+}
+
+li.selected {
+  font-weight: 600;
+  position: relative;
+
+  &::after {
+    display: block;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-4px);
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #8600ef;
+  }
+}

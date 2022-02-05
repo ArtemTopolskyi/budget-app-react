@@ -1,0 +1,35 @@
+@import '/src/styles/typography.scss';
+
+.time-periods {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  padding: 54px 240px 28px;
+
+  &__period {
+    @include railway-regular;
+    font-size: 16px;
+    line-height: 19px;
+    color: #372850;
+    cursor: pointer;
+
+    &.active {
+      font-weight: 600;
+      position: relative;
+
+      &::after {
+        display: block;
+        position: absolute;
+        bottom: -12px;
+        left: 50%;
+        transform: translateX(-4px);
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #8600ef;
+      }
+    }
+  }
+}
