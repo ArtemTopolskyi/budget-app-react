@@ -53,8 +53,16 @@ export const formatDate = (date) => {
 
 export const formatDateAndTime = (date) => {
   return `${date.getDate()} ${lowerCaseMonthName[date.getMonth()]} ${date.getFullYear()} `
-    + `${date.getHours()}:${date.getMinutes()}`;
+    + `${date.getHours()}:${formatMinutes(date.getMinutes())}`;
 }
+
+const formatMinutes = (minutes) => {
+  if (minutes.toString().length === 1) {
+    return `0${minutes}`;
+  };
+
+  return minutes;
+} 
 
 export const sortOperationsByPeriod = (operations, timePediod) => {
   const keyCreator = keyCreatorByPeriod(timePediod)
