@@ -1,6 +1,6 @@
 import React from 'react';
-import { monthName, TimePeriod } from '../constants';
-import { isToday, isYesterday, formatDate } from '../helpers';
+import { monthName, TimePeriod } from '../../constants';
+import { isToday, isYesterday, formatDate } from '../../helpers';
 import { Operation } from '../Operation';
 import './OperationGroup.scss';
 

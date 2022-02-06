@@ -1,4 +1,4 @@
-import { BudgetAppWrapper } from './BudgetAppWrapper';
+import { BudgetAppWrapper } from './components/BudgetAppWrapper';
 
 function App() {
   return (

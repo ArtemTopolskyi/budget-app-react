@@ -19,6 +19,9 @@
 
   &__add-button {
     @include railway-bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 14px 42px;
     background-color: #f3e4ff;
 
@@ -31,7 +34,6 @@
 
     &:hover {
       background-color: #c2a2db;
-      ;
     }
   }
 }

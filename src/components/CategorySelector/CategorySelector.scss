@@ -1,0 +1,180 @@
+@import '/src/styles/typography.scss';
+
+.category-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 230px);
+  gap: 16px 75px;
+
+  &__button {
+    @include railway-bold;
+    position: relative;
+    padding: 16px 0;
+    padding-left: 36px;
+    box-sizing: border-box;
+
+    font-size: 14px;
+    text-align: start;
+    border: none;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 12px;
+      height: 12px;
+
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 16px;
+
+      border-radius: 50%;
+
+      //background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    &.highlight-peach {
+      &.selected {
+        background-color: #FF813B;
+
+        &::before {
+          background-color: #FFF7F3;
+        }
+      }
+
+      &::before {
+        background-color: #FF813B
+      }
+    }
+    
+    &.highlight-pink {
+      &.selected {
+        background-color: #FF42BF;
+
+        &::before {
+          background-color: #FFF2FA;
+        }
+      }
+
+      &::before {
+        background-color: #FF42BF
+      }
+    }
+    
+    &.highlight-orange {
+      &.selected {
+        background-color: #FF3767;
+
+        &::before {
+          background-color: #FFF3F3;
+        }
+      }
+
+      &::before {
+        background-color: #FF3767;
+      }
+    }
+    
+    &.highlight-green {
+      &.selected {
+        background-color: #21CDB8;
+
+        &::before {
+          background-color: #EAFBF6;
+        }
+      }
+
+      &::before {
+        background-color: #21CDB8;
+      }
+    }
+    
+    &.highlight-blue {
+      &.selected {
+        background-color: #683EDE;
+
+        &::before {
+          background-color: #F3F3FF;
+        }
+      }
+
+      &::before {
+        background-color: #683EDE;
+      }
+    }
+    
+    &.highlight-purple {
+      &.selected {
+        background-color: #BE3AEC;
+
+        &::before {
+          background-color: #FFF3FF;
+        }
+      }
+
+      &::before {
+        background-color: #BE3AEC
+      }
+    }
+    
+    &.highlight-red {
+      &.selected {
+        background-color: #FF3B8D;
+
+        &::before {
+          background-color: #FFF3F6;
+        }
+      }
+
+      &::before {
+        background-color: #FF3B8D
+      }
+    }
+    
+    &.highlight-yellow {
+      &.selected {
+        background-color: #FFB931;
+
+        &::before {
+          background-color: #FFFDF3;
+        }
+      }
+
+      &::before {
+        background-color: #FFB931
+      }
+    }
+    
+    &.highlight-light-green {
+      &.selected {
+        background-color: #4FCD3A;
+
+        &::before {
+          background-color: #F7FFF3;
+        }
+      }
+
+      &::before {
+        background-color: #4FCD3A
+      }
+    }
+    
+    &.highlight-light-blue {
+      &.selected {
+        background-color: #46A6EB;
+
+        &::before {
+          background-color: #F3FAFF;
+        }
+      }
+
+      &::before {
+        background-color: #46A6EB
+      }
+    }
+  }
+}
+
+

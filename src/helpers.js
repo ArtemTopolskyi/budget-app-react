@@ -1,5 +1,9 @@
-import { OperationCategory } from "./constants";
-import { lowerCaseMonthName, TimePeriod } from "./constants";
+import {
+  lowerCaseMonthName,
+  TimePeriod,
+  operationColorClasses,
+  OperationCategory,
+} from "./constants";
 
 export const getCategoryName = (category) => {
   switch (category) {
@@ -13,11 +17,21 @@ export const getCategoryName = (category) => {
       return 'Здоровье';
     case OperationCategory.Beauty:
       return 'Красота';
-    case OperationCategory.Other:
+    case OperationCategory.Salary:
+      return 'Зарплата';
+    case OperationCategory.Cashback:
+      return 'Кешбек';
+    case OperationCategory.OtherIncome:
+      return 'Другое операции';
+    case OperationCategory.Terminal:
+      return 'Пополнение через терминал';
+    case OperationCategory.OtherWaste:
     default:
       return 'Другое';
   }
 }
+
+export const colorClassByCategory = (category) => operationColorClasses[category];
 
 export const isToday = (someDate) => {
   const today = new Date()

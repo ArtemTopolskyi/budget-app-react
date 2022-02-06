@@ -6,10 +6,43 @@ export const OperationType = {
 export const OperationCategory = {
   Food: 'food',
   Shopping: 'shopping',
-  Other: 'other',
+  OtherWaste: 'other-waste',
   Cafe: 'cafe',
   Health: 'health',
   Beauty: 'beauty',
+  OtherIncome: 'other-income',
+  Terminal: 'terminal',
+  Salary: 'salary',
+  Cashback: 'cashback',
+}
+
+export const IncomeOperationCategory = {
+  OtherIncome: 'other-income',
+  Terminal: 'terminal',
+  Salary: 'salary',
+  Cashback: 'cashback',
+};
+
+export const WasteOperationCategory = {
+  Food: 'food',
+  Shopping: 'shopping',
+  OtherWaste: 'other-waste',
+  Cafe: 'cafe',
+  Health: 'health',
+  Beauty: 'beauty',
+};
+
+export const operationColorClasses = {
+  [OperationCategory.Food]: 'peach',
+  [OperationCategory.Shopping]: 'pink',
+  [OperationCategory.Cafe]: 'orange',
+  [OperationCategory.Health]: 'green',
+  [OperationCategory.OtherWaste]: 'blue',
+  [OperationCategory.Beauty]: 'purple',
+  [OperationCategory.Cashback]: 'red',
+  [OperationCategory.OtherIncome]: 'yellow',
+  [OperationCategory.Salary]: 'light-green',
+  [OperationCategory.Terminal]: 'light-blue',
 }
 
 export const TimePeriod = {

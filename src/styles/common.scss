@@ -6,7 +6,9 @@ body {
   font-family: 'Raleway', sans-serif;
   font-size: 24px;
   font-weight: 400;
-  background-color: rgba(109, 107, 208, 0.14);
+  background-color: rgba(109, 107, 208, 0.07);
+
+  height: 100vh;
 }
 
 li.selected {
@@ -25,4 +27,44 @@ li.selected {
     border-radius: 50%;
     background-color: #8600ef;
   }
+}
+
+.peach {
+  background-color: #FFF7F3;
+}
+
+.pink {
+  background-color: #FFF2FA;
+}
+
+.orange {
+  background-color: #FFF3F3;
+}
+
+.green {
+  background-color: #EAFBF6;
+}
+
+.blue {
+  background-color: #F3F3FF;
+}
+
+.purple {
+  background-color: #FFF3FF;
+}
+
+.red {
+  background-color: #FFF3F6;
+}
+
+.yellow {
+  background-color: #FFFDF3;
+}
+
+.light-green {
+  background-color: #F7FFF3;
+}
+
+.light-blue {
+  background-color: #F3FAFF;
 }

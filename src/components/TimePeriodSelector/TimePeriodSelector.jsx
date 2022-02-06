@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
 import cn from 'classnames';
-import { TimePeriod } from '../constants';
+import { TimePeriod } from '../../constants';
 import './TimePeriodSelector.scss';
 
 export const TimePeriodSelector = ({ timePeriod, setTimePeriod }) => {

@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
 import cn from 'classnames';
-import { OperationType } from '../constants';
+import { OperationType } from '../../constants';
 import './OperationTypeSelector.scss';
 
 export const OperationTypeSelector = ({

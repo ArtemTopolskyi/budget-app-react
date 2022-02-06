@@ -1,8 +1,10 @@
-import React, { useState, useMemo } from 'react';
-import { OperationType, OperationCategory, TimePeriod } from '../constants';
-import { OperationContainer } from '../OperationContainer/OperationContainer';
-import { TimePeriodSelector } from '../TimePeriodSelector';
-import './TransactionsContainer.scss';
+import React, { useState, useCallback, useMemo } from 'react';
+import { OperationType, OperationCategory } from '../../constants';
+import { OperationTypeSelector } from '../OperationTypeSelector';
+import { TransactionsContainer } from '../TransactionsContainer';
+import { ModalWindow } from '../ModalWindow';
+import './BudgetAppWrapper.scss';
+import { CreateOperationForm } from '../CreateOperationForm/CreateOperationForm';
 
 const today = new Date();
   const anotherToday = new Date(today);
@@ -31,7 +33,7 @@ const today = new Date();
     type: OperationType.Income,
     sum: 220.67,
     date: anotherToday,
-    category: OperationCategory.Shopping,
+    category: OperationCategory.Salary,
   }
 
   const yesterdayOperation = {
@@ -59,41 +61,54 @@ const today = new Date();
     type: OperationType.Income,
     sum: 321.22,
     date: prevYear,
-    category: OperationCategory.Other,
+    category: OperationCategory.Cashback,
   }
   const basicOperations=[operation1, operation2, yesterdayOperation, twoDaysAgoOperation, prevMonthOperation, lastYearOperation];
 
-export const TransactionsContainer = ({ operationType }) => {
-  const [timePeriod, setTimePeriod] = useState(TimePeriod.Day);
+export const BudgetAppWrapper = () => {
   const [operations, setOperations] = useState(basicOperations);
-
+  const [operationType, setOperationType] = useState(OperationType.Waste);
+  const [isModalOpen, setModalOpen] = useState(false);
+  
   const filteredOperations = useMemo(() => (
     operations.filter((operation) => (operation.type === operationType))
   ), [operationType, operations]);
 
-  console.log(operations, filteredOperations);
+  const createOperation = useCallback((operation) => {
+    setOperations([...operations, operation]);
+  }, [operations]);
+
+  const openModal = useCallback(() => {
+    setModalOpen(true);
+  }, []);
+
+  const closeModal = useCallback(() => {
+    setModalOpen(false);
+  }, []);
 
   return (
-    <div className='transactions-container'>
-      <div className='transactions-container__header'>
-        <h1 className='transactions-container__heading'>
-          Транзакции
-        </h1>
-
-        <button className='transactions-container__add-button'>
-          Добавить
-        </button>
+    <>
+      <div className='budget-app-wrapper'>
+        <OperationTypeSelector
+          operationType={operationType}
+          setOperationType={setOperationType}
+        />
+        <TransactionsContainer
+          operations={filteredOperations}
+          openModal={openModal}
+        />
       </div>
 
-      <TimePeriodSelector
-        timePeriod={timePeriod}
-        setTimePeriod={setTimePeriod}
-      />
-
-      <OperationContainer
-        operations={filteredOperations}
-        timePeriod={timePeriod}
-      />
-    </div>
-  );
+      <ModalWindow
+        isOpen={isModalOpen}
+        closeModal={closeModal}
+      >
+        <CreateOperationForm
+          createOperation={createOperation}
+          type={operationType}
+          closeModal={closeModal}
+        />
+      </ModalWindow>
+    </>
+  )
 };

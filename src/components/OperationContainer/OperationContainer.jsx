@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
-import { sortOperationsByPeriod } from '../helpers';
-import { OperationGroup } from '../OperationGroup/OperationGroup';
+import { sortOperationsByPeriod } from '../../helpers';
+import { OperationGroup } from '../OperationGroup';
 
 export const OperationContainer = ({ operations, timePeriod }) => {
   const sortedOperations = useMemo(() => (
