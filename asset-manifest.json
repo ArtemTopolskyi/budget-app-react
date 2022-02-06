@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/budget-app-react/static/css/main.f1a371a1.css",
+    "main.js": "/budget-app-react/static/js/main.17a98213.js",
+    "static/media/health.svg": "/budget-app-react/static/media/health.ff145502cb3cc28f29764a18a25e7c1c.svg",
+    "static/media/food.svg": "/budget-app-react/static/media/food.17c896b1fb4a3a7bbc094633eb196b8c.svg",
+    "static/media/shoping.svg": "/budget-app-react/static/media/shoping.598dd5e15d1f745ce41544e5633c4e82.svg",
+    "static/media/beauty.svg": "/budget-app-react/static/media/beauty.c355fbaa0fbd43f30ab4a5aba60bca3e.svg",
+    "static/media/other-income.svg": "/budget-app-react/static/media/other-income.c34845f6ff7640184f2de99861b2cad5.svg",
+    "index.html": "/budget-app-react/index.html",
+    "static/media/other-waste.svg": "/budget-app-react/static/media/other-waste.df7b1935c32d72b6c58e446710b3b7e5.svg",
+    "static/media/cashback.svg": "/budget-app-react/static/media/cashback.da80b3ec173308735a5423346d50c8e0.svg",
+    "static/media/terminal.svg": "/budget-app-react/static/media/terminal.45839d95b569a811c364ea6ce98f75f8.svg",
+    "static/media/plus.svg": "/budget-app-react/static/media/plus.c7f1a0f96de06afbd76b3bf31e58e98f.svg",
+    "static/media/cafe.svg": "/budget-app-react/static/media/cafe.adbc13239d5bcd81c306a0ce1b24638a.svg",
+    "static/media/salary.svg": "/budget-app-react/static/media/salary.f2e5dac61ce09423467835a50255dc89.svg",
+    "main.f1a371a1.css.map": "/budget-app-react/static/css/main.f1a371a1.css.map",
+    "main.17a98213.js.map": "/budget-app-react/static/js/main.17a98213.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f1a371a1.css",
+    "static/js/main.17a98213.js"
+  ]
+}
